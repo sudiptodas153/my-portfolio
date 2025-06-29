@@ -1,9 +1,27 @@
 import React from "react";
-import logo from '../../../assets//logo.png'
+import logo from '../../../assets/logo.png'
+// import { ScrollLink } from "react-scroll";
+import { Link as ScrollLink } from 'react-scroll';
+// import { useNavigate } from "react-router";
+
 const Navbar = () => {
+
+
+
+
+
+const links = <>
+  <li><ScrollLink to="home" offset={-120} smooth={true} duration={500}>Home</ScrollLink></li>
+  <li><ScrollLink to="about" offset={-120} smooth={true} duration={500}>About me</ScrollLink></li>
+  <li><ScrollLink to="skills" offset={-120} smooth={true} duration={500}>Skills</ScrollLink></li>
+  <li><ScrollLink to="projects" offset={-120} smooth={true} duration={500}>Projects</ScrollLink></li>
+  <li><ScrollLink to="contact" offset={-120} smooth={true} duration={500}>Contact</ScrollLink></li>
+</>
+
+
   return (
     <div className="">
-      <div className="navbar px-3 bg-base-100 shadow-sm">
+      <div className="navbar px-3 border-b border-gray-500 bg-base-100 shadow-sm">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -27,52 +45,20 @@ const Navbar = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
-              <li>
-                <a>Item 1</a>
-              </li>
-              <li>
-                <a>Parent</a>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a>Item 3</a>
-              </li>
+             
+       {links}
             </ul>
           </div>
           <a className=""><img className="w-20" src={logo} alt="" /></a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-            <li>
-              <a>Item 1</a>
-            </li>
-            <li>
-              <details>
-                <summary>Parent</summary>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <a>Item 3</a>
-            </li>
+          <ul className="menu menu-horizontal gap-8 px-1">
+           
+              {links}
           </ul>
         </div>
         <div className="navbar-end">
-          <button className="btn bg-black w-28 text-white">Resume</button>
+          <button className="btn bg-white w-28 text-black">Resume</button>
         </div>
       </div>
     </div>

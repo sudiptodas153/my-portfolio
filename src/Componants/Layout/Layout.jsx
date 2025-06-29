@@ -1,13 +1,18 @@
 import React from 'react';
 import Navbar from '../Shared/Navbar/Navbar';
-import { Outlet } from 'react-router';
+import { Outlet, useLocation } from 'react-router';
 
 const Layout = () => {
+const location = useLocation()
+const hideNav = location.pathname.includes('/details')
+
     return (
         <div>
-            <div>
-                <Navbar></Navbar>
-            </div>
+            {!hideNav && (
+                <div className='sticky top-0 z-50'>
+                    <Navbar />
+                </div>
+            )}
             <Outlet></Outlet>
         </div>
     );

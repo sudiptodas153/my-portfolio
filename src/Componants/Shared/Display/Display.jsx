@@ -6,21 +6,23 @@ import { FaFacebook, FaLinkedin } from "react-icons/fa";
 
 const Display = () => {
   return (
-    <div>
-      <div className="flex justify-around">
+    <div id="home">
+      <div className="flex flex-col-reverse md:flex-row md:justify-around">
+      
         <div className="space-y-4">
-          <h2 className="text-5xl font-bold">Sudipto Das</h2>
-          <h3 className="text-3xl font-semibold">Frontend Developer</h3>
+          <h2 className="text-4xl md:text-5xl font-bold">Sudipto Das</h2>
+          <h3 className="text-2xl md:text-3xl font-semibold">Frontend Developer</h3>
           <p>I am a web developer. I create modern and responsive websites. <br /> Passionate about clean code and user-friendly designs.
           </p>
           <div className="flex items-center gap-3">
             <a href=""><IoLogoGithub  size={30}/></a>
-            <a href=""><FaLinkedin color="#0A66C2" size={30} /></a>
-            <a href=""><FaFacebook color="blue" size={30} /></a>
+            <a href=""><FaLinkedin color="white" size={30} /></a>
+            <a href=""><FaFacebook color="white" size={30} /></a>
           </div>
-          <button className="btn w-28 bg-black text-white">Resume</button>
+          <button className="btn w-28 bg-white text-black">Resume</button>
         </div>
-        <div className="">
+        
+        <div className="flex justify-center">
           <img className=" border-4 h-72 w-72 border-gray-500 p-3 rounded-full" src={my} alt="" />
         </div>
       </div>

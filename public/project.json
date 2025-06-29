@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "name": "SkillForge",
+    "image": "https://i.ibb.co/39Xb1TgJ/project-1.png",
+    "allImg": [
+      "https://i.ibb.co/39Xb1TgJ/project-1.png",
+      "https://i.ibb.co/gMqFX2Lh/login.png",
+      "https://i.ibb.co/Q72X3K2B/registraion.png",
+      "https://i.ibb.co/35zc6fHW/latest.png",
+      "https://i.ibb.co/fVtCLPDL/popular.png",
+      "https://i.ibb.co/zhc6yg14/upcoming.png",
+      "https://i.ibb.co/QFPxKd8X/all.png",
+      "https://i.ibb.co/393Q8pQy/recent.png",
+      "https://i.ibb.co/zW5NVwrH/add.png",
+      "https://i.ibb.co/3ycMxLRz/community.png"
+    ],
+    "stack": [
+      "React",
+      "Firebase",
+      "Tailwind CSS",
+      "MongoDB",
+      "Express.js",
+      "DaisyUI"
+    ],
+    "description": "A full-stack web application where users can browse, enroll, and manage courses. Built using MERN stack, this project demonstrates practical implementation of JWT authentication, Firebase auth, protected routes, MongoDB operations, and modern frontend design.",
+    "liveLink": "https://course-management-system-4bb8d.web.app/",
+    "githubClient": "https://github.com/sudiptodas153/Course-Management-System",
+    "challenges": "Integrating Firebase Auth and Firestore was tricky due to async operations and permission rules setup. Ensuring a fully responsive design across all device sizes with Tailwind CSS needed repeated adjustments and testing. Handling loading, error, and success states properly across multiple asynchronous operations was initially buggy and required refactoring. Restricting access to admin routes without reloading or breaking the app’s routing flow required advanced use of PrivateRoute and context.",
+    "improvements": "Add dynamic progress bars to visually show how much of a course a student has completed. Implement advanced filters (by category, level, rating) and keyword-based search for better usability. Add a step-by-step interface for instructors to easily create and update courses with media support. Enable instructors to view real-time data like total students, earnings, and feedback. Allow users to bookmark courses they want to take later. Enable course-specific Q&A or forums for peer-to-peer and instructor support. Improve credibility with verified reviews and a star rating system for each course."
+  },
+  {
+    "id": 2,
+    "name": "Recipe Book",
+    "image": "https://i.ibb.co/xKpdWxDR/project-2.png",
+    "allImg": [
+      "https://i.ibb.co/PZzyFC44/Screenshot-69.png",
+      "https://i.ibb.co/mr8JGMqK/Screenshot-70.png",
+      "https://i.ibb.co/nMk14Y12/Screenshot-71.png",
+      "https://i.ibb.co/QFtc13N0/Screenshot-72.png",
+      "https://i.ibb.co/Zpgx0hYw/Screenshot-73.png",
+      "https://i.ibb.co/KxvcWWK6/Screenshot-74.png",
+      "https://i.ibb.co/Hpz7RgJP/Screenshot-75.png",
+      "https://i.ibb.co/ch8qZJVn/Screenshot-76.png"
+    ],
+    "stack": [
+      "React",
+      "Firebase",
+      "Tailwind CSS",
+      "MongoDB",
+      "Express.js",
+      "DaisyUI"
+    ],
+    "description": "The Recipe Book is a dynamic food recipe application that allows users to browse, view, and favorite delicious recipes. It features a clean UI, authentication system, and role-based data rendering, delivering a smooth user experience for food lovers and culinary enthusiasts.",
+    "liveLink": "https://recipe-book-202dc.web.app/",
+    "githubClient": "https://github.com/sudiptodas153/recipe-book",
+    "challenges": "Setting up proper protected routes using React Router and Firebase Auth was tricky, especially ensuring that- 1. Users cannot access certain pages unless logged in 2. The app doesn’t flicker or break during auth state transitions. Ensuring components and buttons (like “Add to Favorites”) behave differently for logged-in vs non-logged-in users needed precise condition management. Designing flexible and visually appealing recipe cards that worked well across mobile, tablet, and desktop took multiple iterations with Tailwind classes. Each chef had a dedicated dynamic route. Handling dynamic route parameters and data fetching without error was a challenge, especially when reloading the page directly on dynamic URLs.",
+    "improvements": "Add a global search feature to quickly find recipes by name or ingredient. Allow users to view and manage their favorite recipes in one place. Let authenticated users contribute and upload their own recipes, with admin moderation. Allow users to log in using Google, GitHub, or Facebook for better accessibility. Introduce admin roles to review and approve user-submitted content. Let users rate recipes based on their experience. Add a comments area for sharing tips, modifications, and user feedback."
+  },
+  {
+    "id": 3,
+    "name": "MediCare",
+    "image": "https://i.ibb.co/76MS4xf/project-3.png",
+    "allImg": [
+      "https://i.ibb.co/76MS4xf/project-3.png",
+      "https://i.ibb.co/CKrWVJdw/Screenshot-77.png",
+      "https://i.ibb.co/Z3Jk1kK/Screenshot-78.png",
+      "https://i.ibb.co/fzHBF7r1/Screenshot-79.png",
+      "https://i.ibb.co/GvGCZCCL/Screenshot-80.png",
+      "https://i.ibb.co/0bY6qXh/Screenshot-81.png"
+    ],
+    "stack": ["React",
+    "DaisyUI",
+    "Tailwind CSS",
+    "Netlify"
+  ],
+  "description": "MediCare Help is a medical services and health support web application that connects users with healthcare professionals and service information. It offers essential medical details, doctor profiles, and service pages for a seamless digital healthcare experience.",
+  "liveLink": "https://medi-care-help.netlify.app/",
+  "githubClient": "https://github.com/sudiptodas153/Medi-Care",
+  "challenges": "As there’s no backend or authentication system- Protecting certain routes or personalizing content wasn't possible.Had to use mock data and manually ensure pages behave consistently. Handling dynamic routing for doctor and service detail pages required- Correctly managing route parameters.Designing fallback UIs for missing or incorrect data. Making all content—including long paragraphs and image grids—look good on all devices was time-consuming. Required frequent testing and custom Tailwind breakpoints.",
+  "improvements": "Add login/signup functionality using Firebase or another backend system. Separate dashboards for users (patients), doctors, and admins. Use a backend (Node.js, Express, or Firebase) to store and manage services, doctors, and blogs. Connect with a database like MongoDB or Firebase Firestore to make updates live and manageable. Allow users to select a doctor, pick a date/time, and book appointments. Email/SMS confirmation for appointment bookings using third-party APIs. Add a search bar to filter doctors or services by keyword. Allow admin or doctors to post articles and advice. Convert the app into a Progressive Web App for installable, offline-friendly use."
+}
+]
