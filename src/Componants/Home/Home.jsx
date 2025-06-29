@@ -4,6 +4,7 @@ import About from '../Shared/About/About';
 import Skills from '../Shared/Skills/Skills';
 import Projects from '../Shared/Projects/Projects';
 import { useLoaderData } from 'react-router';
+import Contact from '../Shared/Contact/Contact';
 
 const Home = () => {
     const data = useLoaderData()
@@ -14,6 +15,7 @@ const Home = () => {
             <About></About>
             <Skills></Skills>
             <Projects data={data}></Projects>
+            <Contact></Contact>
         </div>
     );
 };
