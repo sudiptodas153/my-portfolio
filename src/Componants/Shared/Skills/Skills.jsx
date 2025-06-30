@@ -1,5 +1,6 @@
 import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs } from "react-icons/fa";
 import { SiTailwindcss, SiDaisyui, SiMongodb, SiExpress, SiFirebase } from "react-icons/si";
+import { motion } from 'framer-motion'
 
 const Skills = () => {
   const skills = [
@@ -20,13 +21,16 @@ const Skills = () => {
       <h2 className='text-4xl font-bold text-center'>Skills</h2>
       <div className="grid grid-cols-1  md:grid-cols-5 gap-8 mt-10">
         {skills.map((skill, index) => (
-          <div
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
             key={index}
             className="flex flex-col items-center border border-gray-100  shadow-lg rounded-lg p-6 hover:scale-105 transition-transform "
           >
             {skill.icon}
             <p className="mt-3 text-lg font-semibold ">{skill.name}</p>
-            
+
             {/* Progress Bar */}
             <div className="w-full bg-black rounded-full h-3 mt-4">
               <div
@@ -35,7 +39,7 @@ const Skills = () => {
               ></div>
             </div>
             <p className="mt-1 text-sm">{skill.level}%</p>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
